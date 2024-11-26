@@ -11,7 +11,7 @@ An experiment deploying dapr as a sidecar in App Service
 From the root of the project run
 
 ```bash
-docket-compose up
+docker-compose up
 ```
 
 Once docker is running, change to the api-app folder and run
