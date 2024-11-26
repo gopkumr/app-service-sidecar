@@ -1,0 +1,30 @@
+### Testing Locally
+
+POST http://localhost:5001/set-state HTTP/1.1
+Content-Type: application/json
+
+{
+  "Id":"1",
+  "Name":"User 1",
+  "DOB":"2020-01-01"
+}
+
+###
+
+GET http://localhost:5001/get-state/1
+
+
+### Deployed code
+
+POST https://sidecar-app-dev.azurewebsites.net/set-state HTTP/1.1
+Content-Type: application/json
+
+{
+  "Id":"1",
+  "Name":"User 1",
+  "DOB":"2020-01-01"
+}
+
+###
+
+GET https://sidecar-app-dev.azurewebsites.net/get-state/1

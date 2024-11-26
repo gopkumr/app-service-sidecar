@@ -1,0 +1,15 @@
+services:  
+  dapr-sidecar:  
+    image: dapr-sidecar:local
+    build:
+      context: dapr-statestore
+      dockerfile: ./Dockerfile
+      args:
+        COMPONENT_PATH: "components-deploy"
+    ports:
+      - "3500:3500"
+      - "50001:50001"
+  redis:  
+    image: "redis:latest"  
+    ports:  
+      - "6379:6379"  
